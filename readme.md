@@ -2,7 +2,7 @@
 
 This is the documentation for how to use the first version of the Decobubbles screenshot utility (feel free to propose a better name).
 
-The program runs in three parts, and as of now, each must be run manually. This will hopefully change in the near future.
+The program runs in multiple parts, and as of now, each must be run manually. This will hopefully change in the near future.
 
 Dependencies:
 You will need to install Python 3 in addition to the following Python libraries, either via pip or another Python package manager. The versions I use are listed in parantheses. Other versions may or may not work, so I recommend using the ones I list, but feel free to try on whichever version you may already have installed.
@@ -24,7 +24,7 @@ If you are not familiar with the console, the simplest way to do this is to navi
 
 You must be an admin or have access to an admin account on decobubbles.com in order for this to work.
 
-Find the ScreenshotApp folder in your file explorer (wherever you unzipped it), and first find the login_info.txt file. Replace the text that says “EMAIL” with your email and replace the text that says “PASSWORD” with your password. Make sure you don’t add/remove any lines, i.e., your email should be on line 1 and your password should be on line 2 with no extraneous spaces. 
+Find the deco_analysis folder in your file explorer (wherever you unzipped it), and first create a file called login_info.txt. Type your username and password for decobubbles on lines 1 and 2, respectively. Make sure there are no extraneous spaces or extra lines. 
 
 *SECURITY NOTICE* Obviously storing your password in plaintext is not very secure, and a different method will be used in the final version of the app. However, as long as no one has access to your computer, and you don’t upload the file to Github (like I did), the app should work securely. In any case, especially if this is a password you use for other websites as well, I would strongly recommend deleting it from the file when not using the app. 
 
