@@ -78,6 +78,8 @@ def crop_image(path, cropy = None, cropx = None):
     return cropped, True, cropy, cropx
 
 if __name__ == "__main__":
+    if not os.path.isdir(OUT_PATH):
+        os.mkdir(OUT_PATH)
     for video in os.listdir(IN_PATH):
         next_video = False
         cropy = []

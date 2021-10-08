@@ -17,9 +17,11 @@ numpy (1.20.3)
 Everything else you need should be contained in the Github repository.
 
 **Step 1: Clone the Github repository**
+
 If you are not familiar with the console, the simplest way to do this is to navigate to the project URL at which is at [github.com/?], click the green box named code in the upper right corner, and click download zip. Then unzip the file at whichever location you would like to save it. Remember this path, as you will need it in the next steps.
 
 **Step 2: Enter your username/password.**
+
 You must be an admin or have access to an admin account on decobubbles.com in order for this to work.
 
 Find the ScreenshotApp folder in your file explorer (wherever you unzipped it), and first find the login_info.txt file. Replace the text that says “EMAIL” with your email and replace the text that says “PASSWORD” with your password. Make sure you don’t add/remove any lines, i.e., your email should be on line 1 and your password should be on line 2 with no extraneous spaces. 
@@ -29,6 +31,7 @@ Find the ScreenshotApp folder in your file explorer (wherever you unzipped it), 
 If you are getting stuck at the login page in the steps 4 and 5, double check to make sure you formatted the file correctly.
 
 **Step 3: Navigate to the directory in terminal**
+
 First, navigate in terminal/command prompt to the folder where the scripts are contained. If you are using anaconda, make sure to activate the correct environment. You can also use an IDE (I use Visual Studio Code) which can allow you to skip using command line, but command line requires the least software installation.
 
 In my case (Ubuntu 18.04), this looks like:
@@ -38,6 +41,7 @@ In my case (Ubuntu 18.04), this looks like:
 *Note* If you run all three scripts in succession from the same console window, you will only have to do the above once. However, if you use a new console window, you will have to change to the correct directory each time.
 
 **Step 4: Run get_completed_information.py**
+
 Simply type the following in your console window: 
 >python get_completed_information.py
 
@@ -49,6 +53,7 @@ Simply type the following in your console window:
 Assuming everything works as intended, a chrome browser window should open up, log you in, then start clicking through the information for all completed videos. Wait until this is over. It should take less than a minute, so hold off on the coffee break till step 5. The browser window should close automatically once the program is finished running.
 
 **Step 5: Run take_screenshots.py**
+
 Now type in the same console window:
 >python take_screenshots.py
 
@@ -59,10 +64,26 @@ If the program crashes for any reason, look at your console for the last video n
 Again, when the program finishes, the browser window should close automatically. The text “All videos completed” should also print to the console. If this does not print, there was likely an error and you should run it from where it left off. 
 
 **Step 6: Run crop_images.py**
+
 Type in the same console window:
 >python crop_images.py
 
 This will also take some time, but likely less than an hour. No internet connection is required for this portion. If it fails to crop a screenshot automatically, then that screenshot will be displayed for a second. If this happens, please inform me of which one, and I will try to fix my algorithm at some point. For the time being, your best bet is to ignore that video, or go through cropping the 30+ screenshots for it manually. 
+
+**Step 7: Download original videos**
+
+Now run download_original_videos.py
+
+>python download_original_videos.py
+
+This should download all the videos from dropbox into a folder called by default original_videos. You can change the output folder by editing OUT_PATH in the python file. It shouldn't take too long for all the videos to download, depending on your Internet connection.
+
+**Step 8: Run Cross Correlation:**
+
+>python cross_correlation.py
+
+Currently you can only see the best matching frame along with the cropped screenshot, starting from frame 1 and going forward. This step is not complete. 
+
 
 **Results:**
 At the end, you should have two folders of screenshots: screenshots and sc_cropped. You will likely only need sc_cropped in the future. The folder hierarchy is organized by video_name>rater_name>ss<#>_cropped.png. 

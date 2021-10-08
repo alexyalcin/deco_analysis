@@ -12,6 +12,8 @@ def download_mp4(video, url, path):
                 f.write(chunk)
 
 if __name__ == "__main__":
+    if not os.path.isdir(OUT_PATH):
+        os.mkdir(OUT_PATH)
     video_urls = get_video_urls()
     for video in video_urls.keys():
         url = video_urls[video]

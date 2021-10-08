@@ -43,6 +43,7 @@ def get_video_urls():
     for video in ALL_VIDEO_INFO:
         video_urls[video['title'][:-4]] = video['url']
     return video_urls
-
-urls = get_video_urls()
-print (urls)
+    
+if __name__ == "__main__":
+    urls = get_video_urls()
+    print (urls)
