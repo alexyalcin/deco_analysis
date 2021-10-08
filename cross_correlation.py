@@ -86,7 +86,9 @@ def find_and_save_original_frames():
     frame_original_nums = find_original_frames(1, total_num)
     print (frame_original_nums["ss1300"])
 
-find_and_save_original_frames()
+
+if __name__ == "__main__":
+    find_and_save_original_frames()
 
 
 # frames = get_frames_near(video1, 142)
